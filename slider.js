@@ -67,10 +67,9 @@
                  }, 30);
              }, _this.duration);
          }
+         // 阻止手机默认事件
          document, addEventListener("touchstart", function(e) {
-             e.preventDefault(); _this.container.style.transition = "none";
-                 _this.container.style.transform = "translateX(" + -_this.currentIndex * wrap.offsetWidth + "px)";
-                 _this.container.style.WebkitTransform = "translateX(" + -_this.currentIndex * wrap.offsetWidth + "px)";
+             e.preventDefault(); 
          }, false);
          wrap.addEventListener("touchstart", function(e) {
              clearInterval(_this.timer);
